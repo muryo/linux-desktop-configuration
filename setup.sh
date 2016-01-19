@@ -5,16 +5,16 @@ DIR="$( cd "$(dirname "$0")" && pwd)"
 
 mail_setup()
 {
-	ln -sf $DIR/mutt $HOME/.mutt
-	ln -sf $DIR/muttrc $HOME/.muttrc
-	ln -sf $DIR/getmail $HOME/.getmail
-	ln -sf $DIR/procmailrc $HOME/.procmailrc
-	ln -sf $DIR/msmtprc $HOME/.msmtprc
+	ln -sv $DIR/mutt $HOME/.mutt
+	ln -sv $DIR/muttrc $HOME/.muttrc
+	ln -sv $DIR/getmail $HOME/.getmail
+	ln -sv $DIR/procmailrc $HOME/.procmailrc
+	ln -sv $DIR/msmtprc $HOME/.msmtprc
 
 	mkdir -p $HOME/.mail
 }
 
-ln -sf $DIR/vimrc $HOME/.vimrc
-ln -sf $DIR/bashrc $HOME/.bashrc
+ln -sv $DIR/vimrc $HOME/.vimrc
+ln -sv $DIR/bashrc $HOME/.bashrc
 
 mail_setup
