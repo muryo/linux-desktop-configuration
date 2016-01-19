@@ -1,0 +1,17 @@
+[retriever]
+type = SimplePOP3SSLRetriever
+server = OutlookSH.intel.com
+username = xiaolong.ye@intel.com
+port = 995
+
+[destination]
+type = MDA_external
+path = /usr/bin/procmail
+
+[options]
+read_all = false
+delivered_to = false
+received = false
+verbose = 2
+delete = 0
+message_log = ~/.getmail/intel-outlook-mail.log

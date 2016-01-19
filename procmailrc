@@ -1,0 +1,30 @@
+MAILDIR=$HOME/.mail
+DEFAULT=$MAILDIR/inbox/
+LOGFILE=$MAILDIR/procmail_log
+
+:0
+* ^Subject:(.*lkp.*PATCH|.*PATCH.*lkp)
+lkp-patches/
+
+:0
+* ^From:.*julie.du@intel
+manager/
+
+:0
+* ^From:.*do_not_reply@jira
+JIRA/
+
+:0
+* ^Subject:.*(MSR|msr|Msr)
+MSR/
+
+:0
+* ^To:.*git@vger
+git-maillist/
+
+:0
+* ^CC:.*git@vger
+git-maillist/
+
+:0
+inbox/
